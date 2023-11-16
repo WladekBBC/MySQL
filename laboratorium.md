@@ -1,8 +1,9 @@
 #BAZY DANYCH
 
 ***ZADADNIE 4***
-```
-SQL
+### punkt 1 i 2
+```sql
+
 CREATE TABLE przetwory(id_przetworu INT primary KEY auto_increment, 
 rok_produkcji  smallint default '1654',
 id_wykonawcy int default null,
