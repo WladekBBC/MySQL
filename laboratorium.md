@@ -55,9 +55,12 @@ alter table postac add column funkcja varchar(50);
 ```
 
 # punkt 5
-zmieniamy kolumnę funkcja dla Bjorna
+zmieniamy kolumnę funkcja dla Bjorna i wikingów
 ```sql
 update postac set funkcja = 'kapitan' where id_postaci = 1;
+update postac set funkcja = 'wiking' where id_postaci = 5;
+update postac set funkcja = 'wiking' where id_postaci = 6;
+update postac set funkcja = 'wiking' where id_postaci = 7;
 ```
 # punkt 6
 dodajemy klucz obcy dla relacji miedzy postacią a statkiem 
