@@ -84,5 +84,10 @@ alter table marynarz add foreign key(marynarz_statek) references statek(nazwa_st
 ```
 
 ***ZADANIE 5***
-# PUNKT A
+```sql
+update marynarz set marynarz_statek = null;
+alter table marynarz drop foreign key marynarz_ibfk_1;
+drop table statek;
+
+```
 
