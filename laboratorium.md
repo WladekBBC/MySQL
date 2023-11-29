@@ -1,4 +1,16 @@
 #BAZY DANYCH
+# Zadanie 1 
+```sql
+ create table postac(
+    -> id_postaci int  primary key auto_increment,
+    -> nazwa varchar(40),
+    -> rodzaj enum('wiking', 'ptak', 'kobieta'),
+    -> data_ur date,
+    -> wiek int unsigned);
+Query OK, 0 rows affected (0.06 sec)
+
+
+```
 
 ***ZADADNIE 4***
 ### punkt 1 i 2
