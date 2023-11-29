@@ -9,8 +9,13 @@
     -> wiek int unsigned);
 Query OK, 0 rows affected (0.06 sec)
 
-
+insert into postac(nazwa, rodzaj, data_ur, wiek)  values('Bjorn', 'wiking', '1999-01-01', '24');
+insert into postac(nazwa, rodzaj, data_ur, wiek)  values('Drozd', 'wiking', '1899-01-01', '124');
+insert into postac(nazwa, rodzaj, data_ur, wiek)  values('Tesciowa', 'kobieta', '1799-01-01', '224');
+update postac set wiek = '88' where id_postaci = 3;
 ```
+
+
 
 ***ZADADNIE 4***
 ### punkt 1 i 2
