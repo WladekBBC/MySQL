@@ -68,11 +68,13 @@ alter table postac add check (wiek<=1000);
  alter table postac modify rodzaj enum('wiking', 'ptak', 'kobieta', 'syrena','waz');
 ```
 # podpunkt b
+```sql
 create table marynarz like postac;
 desc marynarz;
 create table marynarz like postac;
 desc marynarz;
 insert into marynarz select * from postac where statek is not null;
+```
 
 # podpunkt c
 ```sql
