@@ -19,11 +19,14 @@ update postac set wiek = '88' where id_postaci = 3;
 ```sql
 
 create table walizka(id_walizki int primary key auto_increment,
-->pojemnosc int unsigned,
+-> pojemnosc int unsigned,
 -> kolor enum('rozowy', 'czerwony', 'teczowy', 'zolty'),
 -> id_wlasciciela int,
 -> foreign key (id_wlasciciela) references postac(id_postaci) on delete cascade);
 Query OK, 0 rows affected (0.07 sec)
+
+alter table walizka alter column kolor set default 'rozowy';
+insert into walizka (pojemnosc, kolor, id_wlasciciela) values('50', 'czerwony', (select id_postaci from postac where id_postaci = 1));
 
 ```
 
