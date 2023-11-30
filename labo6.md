@@ -60,8 +60,9 @@ null;
 --3
  select distinct nazwa, rodzaj from zasob where nazwa like 'Ba%' union select distinct nazwa, rodzaj from zasob where nazwa like '%os';
 
-
-
+--1
+ select concat(waga * 0.3, '(resztki)') from zasob where rodzaj= 'jedzenie'; select concat(waga
+* 0.7, '(netto)') from zasob where rodzaj= 'jedzenie';
 
 
 ```
