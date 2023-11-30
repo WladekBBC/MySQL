@@ -63,7 +63,8 @@ null;
 --1
  select concat(waga * 0.3, '(resztki)') from zasob where rodzaj= 'jedzenie'; select concat(waga
 * 0.7, '(netto)') from zasob where rodzaj= 'jedzenie';
-
+--1.1
+ select concat(waga * 0.3, '(resztki)', '     ',waga*0.7, '(netto)') from zasob;
 
 ```
 
