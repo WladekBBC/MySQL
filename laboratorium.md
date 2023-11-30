@@ -29,7 +29,21 @@ alter table walizka alter column kolor set default 'rozowy';
 insert into walizka (pojemnosc, kolor, id_wlasciciela) values('50', 'czerwony', (select id_postaci from postac where id_postaci = 1));
 
 ```
+# zadanie 3 
+```sql
+create table izba (adres_budynku INT,
+    -> nazwa_izby VARCHAR(255),
+    -> metraz int unsigned,
+    -> wlasciciel INT,
+    -> primary key(adres_budynku,nazwa_izby),
+    -> foreign key(wlasciciel) references postac(id_postaci) on delete set null);
+Query OK, 0 rows affected (0.08 sec)
 
+
+
+
+
+```
 
 ***ZADADNIE 4***
 ### punkt 1 i 2
