@@ -40,10 +40,28 @@ select * from zasob where rodzaj is not null order by waga asc;
 
 
 ```sql
+--1
 select distinct ilosc, rodzaj from zasob where rodzaj = 'jedzenie' and ilosc = 1;
+--2
  select concat(nazwa , ' oto ', rodzaj) from kreatura where rodzaj like 'wi%' and rodzaj is not
 null;
+--3
  select waga * ilosc from zasob where dataPozyskania between '2000-01-01' and '2007-12-31';    
+
+
+```
+
+# Zadanie 5
+
+
+```sql
+--2
+ select * from zasob where not(rodzaj is not null);
+--3
+ select distinct nazwa, rodzaj from zasob where nazwa like 'Ba%' union select distinct nazwa, rodzaj from zasob where nazwa like '%os';
+
+
+
 
 
 ```
