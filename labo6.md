@@ -4,8 +4,8 @@
 
 ```sql
 create table kreatura select * from wikingowie.kreatura;
- create table zasob select * from wikingowie.zasob;
- create table ekwipunek select * from wikingowie.ekwipunek;
+create table zasob select * from wikingowie.zasob;
+create table ekwipunek select * from wikingowie.ekwipunek;
 select * from zasob;
 select * from zasob where rodzaj = 'jedzenie';
 select idZasobu , ilosc from ekwipunek where idKreatury in(1,3,5);
@@ -28,11 +28,10 @@ select idZasobu , ilosc from ekwipunek where idKreatury in(1,3,5);
 
 ```sql
 
- select * from zasob where dataPozyskania like '____-08-__' union
- select * from zasob where dataPozyskania like '____-07-__';
- select * from kreatura where dataUr is not null order by dataUr asc;
+select * from zasob where dataPozyskania like '____-08-__' union
+select * from zasob where dataPozyskania like '____-07-__';
+select * from kreatura where dataUr is not null order by dataUr asc;
 select * from zasob where rodzaj is not null order by waga asc;
-
 
 
 ```
@@ -47,7 +46,6 @@ select distinct ilosc, rodzaj from zasob where rodzaj = 'jedzenie' and ilosc = 1
 null;
 --3
  select waga * ilosc from zasob where dataPozyskania between '2000-01-01' and '2007-12-31';    
-
 
 ```
 
