@@ -40,5 +40,6 @@ select * from kreatura natural join ekwipunek;
 --2
 select k.nazwa as nazwa_kreatury, k.dataUr, z.rodzaj from kreatura k join ekwipunek e on k.idKreatury = e.idKreatury join zasob z on e.idZasobu = z.idZasobu where z.rodzaj is not null and k.dataUr is not null order by k.dataUr asc limit 5;
 --3
+select k1.idKreatury, k1.nazwa as nazwa_kreatury_1, k2.idKreatury,  k2.nazwa as nazwa_kreatury_2 from kreatura k1 join kreatura k2 on k1.idKreatury = k2.idKreatury - 5 where k2.idKreatury is not null;
 
 ```
