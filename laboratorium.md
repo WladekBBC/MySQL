@@ -45,8 +45,8 @@ Query OK, 0 rows affected (0.08 sec)
 
 ```
 
-***ZADADNIE 4***
-### punkt 1 i 2
+# ZADADNIE 4
+***punkt 1 i 2***
 ```sql
 
 CREATE TABLE przetwory(id_przetworu INT primary KEY auto_increment, 
@@ -63,8 +63,8 @@ foreign key(id_konsumenta) references postac(id_postaci) on delete set null
 INSERT INTO przetwory(zawartosc, dodatek) values('bigos','papryczka chilli');
 ```
 
-***ZADANIE 5***
-# punkt 1
+# ZADANIE 5
+***punkt 1***
 dodajemy nowe postacie do tabeli postac
 ```SQL
 INSERT INTO postac(nazwa, rodzaj, wiek) values('Bigos','wiking', '23');
@@ -73,7 +73,7 @@ INSERT INTO postac(nazwa, rodzaj, wiek) values('Potężny Osioł','wiking', '13'
 
 
 ```
-# punkt 2
+***punkt 2***
 tworzymy tabele statek 
 ```SQL
 CREATE TABLE statek(nazwa_statku varchar(60) primary KEY auto_increment, 
@@ -82,7 +82,7 @@ data_wodowania date,
 max_ladownosc mediumint unsigned
  );
 ```
-# punkt 3
+***punkt 3***
 dodajemy statki do tabeli statek
 ```sql
  INSERT INTO statek values('SantMarry', 'wojskowy','1999-11-09','200');
@@ -91,7 +91,7 @@ dodajemy statki do tabeli statek
 
 ```
 
-# punkt 4
+***punkt 4***
 dodajemy kolumnę funkcja do tabeli postac
 ```
 sql
@@ -99,7 +99,7 @@ alter table postac add column funkcja varchar(50);
 
 ```
 
-# punkt 5
+***punkt 5***
 zmieniamy kolumnę funkcja dla Bjorna i wikingów
 ```sql
 update postac set funkcja = 'kapitan' where id_postaci = 1;
@@ -107,12 +107,12 @@ update postac set funkcja = 'wiking' where id_postaci = 5;
 update postac set funkcja = 'wiking' where id_postaci = 6;
 update postac set funkcja = 'wiking' where id_postaci = 7;
 ```
-# punkt 6
+***punkt 6***
 dodajemy klucz obcy dla relacji miedzy postacią a statkiem 
 ```sql
 alter table postac add foreign key(postac_statek) references statek(nazwa_statku) on delete restrict;
 ```
-# punkt 7
+***punkt 7***
 wsadzamy wikingów
 ```sql
 
@@ -123,7 +123,7 @@ update postac set postac_statek = 'Grand' where nazwa = 'Tesciowa';
 ```
 
 
-# punkt 8
+***punkt 8***
 usuwamy spizarnie z tabeli izba
 ```sql
 
@@ -131,7 +131,7 @@ delete from izba where nazwa_izby = 'spizarnia';
 
 ```
 
-# punkt 9
+***punkt 9***
 usuwamy tabele izba
 ```sql
 
