@@ -1,4 +1,5 @@
-# Zadanie cicha woda
+# LABO 5
+# Zadanie 1
 ***Punkt A***
 usuwamy dwoch wikingów z tabeli postac
 ```sql
@@ -24,7 +25,7 @@ alter table przetwory drop foreign key przetwory_ibfk_2;
 
 # ZADANIE 2
 
-***Podpunkt a***
+***Podpunkt A***
 ```sql
 alter table postac add column pesel char(11) primary key first;
 alter table postac add primary key (pesel);
