@@ -13,7 +13,7 @@ select idZasobu , ilosc from ekwipunek where idKreatury in(1,3,5);
 
 ```
 
-# zadanie 2 
+# Zadanie 2 
 
 ```sql
  select * from kreatura where not rodzaj = 'wiedzma' and udzwig > 50;
