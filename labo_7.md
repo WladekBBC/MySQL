@@ -61,10 +61,15 @@
   select distinct (k.rodzaj) as rodzaj_kreatury,
 -> e.ilosc, avg(z.waga * e.ilosc) as sreadnia_waga from kreatura k
 -> inner join ekwipunek e on k.idKreatury = e.idZasobu
--> inner join zasob z on z.idZasobu = idEkwipunku
+-> inner join zasob z on z.idZasobu = e.idEkwipunku
 -> where k.rodzaj not in('waz','malpa') and
 -> e.ilosc < 30 group by k.rodzaj, e.ilosc;
 
-
+--2
+ select min(k.dataUr) as najmlodszy,
+-> max(k.dataUr) as najstarszy , min(k2.rodzaj) as najmlodszy_rodzaj,
+-> max(k2.rodzaj) as najstarszy_rodzaj
+-> from kreatura k inner join kreatura k2
+-> on k.dataUr = k2.dataUr group by k.rodzaj;
 
 ```
