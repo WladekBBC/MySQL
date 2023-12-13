@@ -53,3 +53,18 @@ select k1.idKreatury, k1.nazwa as nazwa_kreatury_1,
 -> k1.idKreatury = k2.idKreatury - 5 where k2.idKreatury is not null;
 
 ```
+# Zadanie 5 
+
+
+```sql
+--1
+  select distinct (k.rodzaj) as rodzaj_kreatury,
+-> e.ilosc, avg(z.waga * e.ilosc) as sreadnia_waga from kreatura k
+-> inner join ekwipunek e on k.idKreatury = e.idZasobu
+-> inner join zasob z on z.idZasobu = idEkwipunku
+-> where k.rodzaj not in('waz','malpa') and
+-> e.ilosc < 30 group by k.rodzaj, e.ilosc;
+
+
+
+```
