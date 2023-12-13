@@ -2,10 +2,13 @@
 ```sql
 --1
 select avg(waga) as srednia_waga from kreatura where rodzaj = 'wiking';
+
 --2
 select avg(waga), count(nazwa) from kreatura group by rodzaj;
+
 --3
 select avg(2023 -  year(dataUr)), rodzaj from kreatura where year(dataUr) > 999 group by rodzaj;
+
 ```
 
 
