@@ -48,8 +48,8 @@
  	k.dataUr is not null order by k.dataUr DESC limit 5;
 --3
  select k1.idKreatury, k1.nazwa as nazwa_kreatury_1,
-	 k2.idKreatury,  k2.nazwa as nazwa_kreatury_2
-	 from kreatura k1 join kreatura k2 on
+	k2.idKreatury,  k2.nazwa as nazwa_kreatury_2
+	from kreatura k1 join kreatura k2 on
  	k1.idKreatury = k2.idKreatury - 5 where k2.idKreatury is not null;
 
 ```
