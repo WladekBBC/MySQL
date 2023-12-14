@@ -30,9 +30,13 @@
 ```sql
 --1
 
- SELECT rodzaj , COUNT(*), 
-  	GROUP_CONCAT(nazwa SEPARATOR ' | ')
-  	AS nazwy FROM kreatura GROUP BY rodzaj;
+ SELECT w.nazwa, COUNT(u.id_uczestnika) 
+	AS liczba_uczestnikow, 
+	GROUP_CONCAT(k.nazwa SEPARATOR ' - ') 
+	AS uczestnicy FROM wyprawa w 
+	JOIN uczestnicy u ON w.id_wyprawy=u.id_wyprawy
+	JOIN kreatura k ON k.idKreatury=u.id_uczestnika
+	GROUP BY w.nazwa;
 
 
 
