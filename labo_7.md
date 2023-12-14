@@ -58,12 +58,13 @@
 
 ```sql
 --1
-  select distinct (k.rodzaj) as rodzaj_kreatury,
--> e.ilosc, avg(z.waga * e.ilosc) as sreadnia_waga from kreatura k
--> inner join ekwipunek e on k.idKreatury = e.idZasobu
--> inner join zasob z on z.idZasobu = e.idEkwipunku
--> where k.rodzaj not in('waz','malpa') and
--> e.ilosc < 30 group by k.rodzaj, e.ilosc;
+ SELECT k.rodzaj, AVG(e.ilosc * z.waga)
+	AS srednia_waga FROM kreatura k
+	INNER JOIN ekwipunek e ON k.idKreatury = e.idKreatury
+	INNER JOIN zasob z ON e.idZasobu = z.idZasobu 
+	WHERE k.rodzaj NOT IN('malpa', 'waz')
+	AND e.ilosc < 30 GROUP BY k.rodzaj;
+
 
 --2
  select min(k.dataUr) as najmlodszy,
