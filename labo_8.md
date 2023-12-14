@@ -17,9 +17,9 @@
 --3
  SELECT w.nazwa AS nazwa_wyprawy, SUM(e.ilosc) AS niesione_rzeczy
 	FROM kreatura k JOIN ekwipunek e 
-	ON k.idKreatury=e.idKreatury JOIN uczestnicy u 
-	ON k.idKreatury=u.id_uczestnika JOIN wyprawa w 
-	ON u.id_wyprawy=w.id_wyprawy GROUP BY w.nazwa;
+	ON k.idKreatury = e.idKreatury JOIN uczestnicy u 
+	ON k.idKreatury = u.id_uczestnika JOIN wyprawa w 
+	ON u.id_wyprawy = w.id_wyprawy GROUP BY w.nazwa;
 
 ```
 
