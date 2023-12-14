@@ -27,7 +27,9 @@
 # Zadanie 3
 ```sql
 --3
- select nazwa, idKreatury from kreatura where idKreatury not in (select distinct idKreatury from ekwipunek where idKreatury is not null);
+ select nazwa, idKreatury from kreatura
+	where idKreatury not in (select distinct idKreatury
+	from ekwipunek where idKreatury is not null);
 --2
  select k.nazwa, e.idZasobu, z.nazwa, e.ilosc from kreatura k inner join ekwipunek e on k.idKreatury = e.idKreatury inner join zasob z on e.idZasobu = z.idZasobu;
 --1
