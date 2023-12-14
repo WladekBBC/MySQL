@@ -3,10 +3,10 @@
 ```sql
 --1
 
- CREATE TABLE uczestnicy AS SELECT * FROM wikingowie.etapy_wyprawy;
+ CREATE TABLE etapy_wyprawy AS SELECT * FROM wikingowie.etapy_wyprawy;
  CREATE TABLE uczestnicy AS SELECT * FROM wikingowie.uczestnicy;
- CREATE TABLE uczestnicy AS SELECT * FROM wikingowie.sektor;
- CREATE TABLE uczestnicy AS SELECT * FROM wikingowie.wyprawa;
+ CREATE TABLE sektor AS SELECT * FROM wikingowie.sektor;
+ CREATE TABLE wyprawa AS SELECT * FROM wikingowie.wyprawa;
 
 --2
 
