@@ -29,7 +29,7 @@
 
 ```sql
 --1
-
+ 
  SELECT w.nazwa, COUNT(u.id_uczestnika) 
 	AS liczba_uczestnikow, 
 	GROUP_CONCAT(k.nazwa SEPARATOR ' - ') 
