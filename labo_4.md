@@ -29,7 +29,7 @@ alter table walizka alter column kolor set default 'rozowy';
 insert into walizka (pojemnosc, kolor, id_wlasciciela) values('50', 'czerwony', (select id_postaci from postac where id_postaci = 1));
 
 ```
-# zadanie 3 
+# Zadanie 3 
 ```sql
 create table izba (adres_budynku INT,
     -> nazwa_izby VARCHAR(255),
@@ -39,13 +39,9 @@ create table izba (adres_budynku INT,
     -> foreign key(wlasciciel) references postac(id_postaci) on delete set null);
 Query OK, 0 rows affected (0.08 sec)
 
-
-
-
-
 ```
 
-# ZADADNIE 4
+# Zadanie 4
 ***punkt 1 i 2***
 ```sql
 
@@ -63,7 +59,7 @@ foreign key(id_konsumenta) references postac(id_postaci) on delete set null
 INSERT INTO przetwory(zawartosc, dodatek) values('bigos','papryczka chilli');
 ```
 
-# ZADANIE 5
+# Zadanie 5
 ***punkt 1***
 dodajemy nowe postacie do tabeli postac
 ```SQL
@@ -110,7 +106,8 @@ update postac set funkcja = 'wiking' where id_postaci = 7;
 ***punkt 6***
 dodajemy klucz obcy dla relacji miedzy postacią a statkiem 
 ```sql
-alter table postac add foreign key(postac_statek) references statek(nazwa_statku) on delete restrict;
+alter table postac add foreign key(postac_statek)
+references statek(nazwa_statku) on delete restrict;
 ```
 ***punkt 7***
 wsadzamy wikingów
