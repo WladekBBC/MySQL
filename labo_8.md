@@ -13,7 +13,7 @@
  SELECT nazwa, idKreatury FROM kreatura
 	WHERE idKreatury NOT IN (SELECT DISTINCT id_uczestnika
 	FROM uczestnicy WHERE id_wyprawy IS NOT NULL);
-
+ 
 --3
  SELECT w.nazwa AS nazwa_wyprawy, SUM(e.ilosc) AS niesione_rzeczy
 	FROM kreatura k JOIN ekwipunek e 
