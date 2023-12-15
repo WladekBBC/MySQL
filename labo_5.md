@@ -23,7 +23,7 @@ alter table przetwory drop foreign key przetwory_ibfk_2;
 
 
 
-# ZADANIE 2
+# Zadanie 2
 
 ***Podpunkt A***
 ```sql
@@ -43,7 +43,7 @@ alter table postac modify rodzaj enum('wiking', 'ptak', 'kobieta', 'syrena');
 ```sql
 insert into postac(nazwa, rodzaj, wiek) values('Gertruda Nieszczera', 'syrena', '111');
 ```
-# ZADANIE 3
+# Zadanie 3
 
 ***PODPUNKT a***
 ```sql 
@@ -62,7 +62,7 @@ set max_ladownosc = max_ladownoscmax_ladownosc * 0.7 where data_wodowania betwee
 ```sql
 alter table postac add check (wiek<=1000);
 ```
-# ZADANIE 4
+# Zadanie 4
 
 ***podpunkt a***
  ```sql
@@ -86,7 +86,7 @@ alter table marynarz add column marynarz_statek varchar(60);
 alter table marynarz add foreign key(marynarz_statek) references statek(nazwa_statku);
 ```
 
-# ZADANIE 5
+# Zadanie 5
 ```sql
 update marynarz set marynarz_statek = null;
 alter table marynarz drop foreign key marynarz_ibfk_1;
