@@ -89,8 +89,7 @@ dodajemy statki do tabeli statek
 
 ***punkt 4***
 dodajemy kolumnę funkcja do tabeli postac
-```
-sql
+```sql
 alter table postac add column funkcja varchar(50);
 
 ```
