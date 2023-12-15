@@ -38,7 +38,15 @@
 	JOIN kreatura k ON k.idKreatury=u.id_uczestnika
 	GROUP BY w.nazwa;
 
+--2
 
+SELECT k.nazwa, w.nazwa, s.nazwa 
+	AS nazwa_sektora, e.idEtapu 
+	FROM etapy_wyprawy e
+	JOIN sektor s ON e.sektor=s.id_sektora
+	JOIN wyprawa w ON e.idWyprawy=w.id_wyprawy
+	JOIN kreatura k ON w.kierownik=k.idKreatury
+	ORDER BY w.data_rozpoczecia AND e.kolejnosc;
 
 
 ```
