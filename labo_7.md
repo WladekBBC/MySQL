@@ -3,7 +3,7 @@
 --1
  select avg(waga) as srednia_waga from kreatura where rodzaj = 'wiking';
 
---2
+--2 
  select avg(waga), count(nazwa) from kreatura group by rodzaj;
 
 --3
