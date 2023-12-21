@@ -76,7 +76,7 @@ SELECT k.nazwa, w.nazwa, s.nazwa
 ```sql
 --1
  SELECT w.nazwa, sum(length(ew.dziennik)) 
-	AS suma_znaczkow
+	AS suma_znaczkow 
 	FROM etapy_wyprawy ew JOIN wyprawa w 
 	ON w.id_wyprawy = ew.idWyprawy  
 	GROUP BY w.nazwa HAVING suma_znaczkow < 400;
@@ -84,13 +84,12 @@ SELECT k.nazwa, w.nazwa, s.nazwa
 --2
 
  SELECT w.nazwa AS nazwa_wyprawy,
-	SUM(z.waga*e.ilosc)/COUNT(DISTINCT(u.id_uczestnika)) 
-	AS niesione_rzeczy
-	FROM kreatura k
-	JOIN ekwipunek e ON k.idKreatury=e.idKreatury
-	JOIN uczestnicy u ON k.idKreatury=u.id_uczestnika
-	JOIN wyprawa w ON u.id_wyprawy=w.id_wyprawy
-	JOIN zasob z ON z.idZasobu=e.idZasobu
+	SUM(z.waga * e.ilosc)/COUNT(DISTINCT(u.id_uczestnika)) 
+	AS niesione_rzeczy FROM kreatura k
+	JOIN ekwipunek e ON k.idKreatury = e.idKreatury
+	JOIN uczestnicy u ON k.idKreatury = u.id_uczestnika
+	JOIN wyprawa w ON u.id_wyprawy = w.id_wyprawy
+	JOIN zasob z ON z.idZasobu = e.idZasobu
 	GROUP BY w.nazwa;
 
 ```
