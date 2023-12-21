@@ -91,10 +91,20 @@ SELECT k.nazwa, w.nazwa, s.nazwa
 	JOIN wyprawa w ON u.id_wyprawy = w.id_wyprawy
 	JOIN zasob z ON z.idZasobu = e.idZasobu
 	GROUP BY w.nazwa;
-
 ```
 
+# Zadanie 5
+```sql
+--1
+ SELECT k.nazwa, DATEDIFF(w.data_rozpoczecia, k.dataUr) 
+	AS wiek_w_dniach FROM sektor s
+	JOIN etapy_wyprawy ew ON s.id_sektora = ew.sektor
+	JOIN wyprawa w ON w.id_wyprawy = ew.idWyprawy
+	JOIN uczestnicy u ON w.id_wyprawy = u.id_wyprawy
+	JOIN kreatura k ON k.idKreatury = u.id_uczestnika
+	WHERE ew.sektor = 7;
 
+```
 
 
 
