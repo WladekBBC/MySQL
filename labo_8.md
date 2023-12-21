@@ -50,3 +50,22 @@ SELECT k.nazwa, w.nazwa, s.nazwa
 
 
 ```
+
+# Zadanie 3
+```sql
+--1
+SELECT s.nazwa , count(ew.sektor)
+FROM sektor s 
+LEFT JOIN etapy_wyprawy ew 
+ON s.id_sektora = ew.sektor
+GROUP BY s.nazwa;
+
+--2
+
+
+
+```
+
+
+
+
