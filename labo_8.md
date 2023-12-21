@@ -69,8 +69,28 @@ SELECT k.nazwa, w.nazwa, s.nazwa
 	ON k.idKreatury = u.id_uczestnika
 	GROUP BY k.nazwa;
 
+```
+
+# Zadanie 4
+
+```sql
+--1
+ SELECT w.nazwa, sum(length(ew.dziennik)) 
+	AS suma_znaczkow
+	FROM etapy_wyprawy ew JOIN wyprawa w 
+	ON w.id_wyprawy = ew.idWyprawy  
+	GROUP BY w.nazwa HAVING suma_znaczkow < 400;
+
 
 ```
+
+
+
+
+
+
+
+
 
 
 
