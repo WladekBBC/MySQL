@@ -10,7 +10,7 @@
 
 --2
 
- SELECT nazwa, idKreatury FROM kreatura
+ SELECT nazwa, idKreatury FROM kreatura 
 	WHERE idKreatury NOT IN (SELECT DISTINCT id_uczestnika
 	FROM uczestnicy WHERE id_wyprawy IS NOT NULL);
  
