@@ -61,7 +61,13 @@ SELECT k.nazwa, w.nazwa, s.nazwa
 	GROUP BY s.nazwa;
 
 --2
-
+ SELECT k.nazwa,
+	IF(count(u.id_uczestnika)> 0 , 'brał udział', 'nie brał udziału')
+	AS czy_uczestniczyl
+ 	FROM uczestnicy u 
+	RIGHT JOIN kreatura k 
+	ON k.idKreatury = u.id_uczestnika
+	GROUP BY k.nazwa;
 
 
 ```
