@@ -5,14 +5,14 @@
 
 DELIMITER //
 CREATE TRIGGER before_insert_update_kreatura
-BEFORE INSERT OR UPDATE ON kreatura
+BEFORE INSERT ON kreatura
 FOR EACH ROW
 BEGIN
     IF NEW.waga <= 0 THEN
-        SIGNAL SQLSTATE '45000'
-        SET MESSAGE_TEXT = 'Waga kreatury musi być większa od zera.';
+        SET NEW.waga = 1;
     END IF;
 END;
 //
 DELIMITER ;
+
 ```
