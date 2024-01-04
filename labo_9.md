@@ -43,15 +43,17 @@ DELIMITER ;
 # Zadanie 3
 
 ```sql
-DELIMITER //
-CREATE PROCEDURE eliksir_sily(IN id INT)
-BEGIN
-    UPDATE kreatura
-    SET udzwig = 1.2 * udzwig
-    WHERE idKreatury = id;
-END;
-//
-DELIMITER ;
+
+--1
+ DELIMITER //
+ CREATE PROCEDURE eliksir_sily(IN id INT)
+ BEGIN
+     UPDATE kreatura
+     SET udzwig = 1.2 * udzwig
+     WHERE idKreatury = id;
+ END;
+ //
+ DELIMITER ;
 ```
 
 
