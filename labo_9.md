@@ -54,6 +54,20 @@ DELIMITER ;
  END;
  //
  DELIMITER ;
+
+--2
+DELIMITER //
+CREATE FUNCTION redaguj_t(wprowadzany_tekst VARCHAR(255))
+	RETURNS VARCHAR(255)
+BEGIN
+	DECLARE obrobiony_tekst VARCHAR(255);
+	SET obrobiony_tekst = UPPER(wprowadzany_tekst);
+	RETURN obrobiony_tekst;
+END
+//
+DELIMITER ;
+
+SELECT redaguj_t('fotobimba') AS wynik
 ```
 
 
