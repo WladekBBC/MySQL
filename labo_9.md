@@ -118,3 +118,32 @@ END
 DELIMITER ;
 
 ```
+
+# Zadanie 5 
+
+```sql
+
+--1
+DELIMITER //
+CREATE PROCEDURE procedura ()
+BEGIN
+	DECLARE maks INT;
+	DECLARE srednia DOUBLE;
+	DECLARE suma INT;
+
+	SELECT AVG(udzwig) FROM kreatura AS srednia;
+	SELECT SUM(udzwig) FROM kreatura AS suma;
+	SELECT MAX(udzwig) FROM kreatura AS maks;
+
+	SELECT maks, srednia, suma;
+END
+//
+DELIMITER ;
+
+--2
+
+
+```
+
+
+
