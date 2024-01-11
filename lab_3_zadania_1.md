@@ -47,9 +47,16 @@ SELECT DISTINCT(d.nazwa), d.id_dzialu, COUNT(p.id_pracownika)
 # Zadanie 6
 
 ```sql
+	
+ SELECT ROUND(AVG(pensja), 2) FROM pracownik;
+
+```
+# Zadanie 7
+
+```sql
+
 
 
 ```
-
 
 
