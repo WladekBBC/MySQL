@@ -32,3 +32,24 @@ SELECT DISTINCT(d.nazwa), d.id_dzialu, COUNT(p.id_pracownika)
 	t.id_towaru = s.towar
 	GROUP BY k.nazwa_kategori, t.kategoria;
 ```
+
+# Zadanie 5 
+
+```sql
+
+ SELECT k.nazwa_kategori,
+	GROUP_CONCAT(t.nazwa_towaru) AS cos
+	FROM kategoria k JOIN towar t
+	ON t.kategoria = k.id_kategori
+	GROUP BY k.id_kategori
+```
+
+# Zadanie 6
+
+```sql
+
+
+```
+
+
+
