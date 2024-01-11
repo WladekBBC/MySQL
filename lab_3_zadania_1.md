@@ -8,7 +8,7 @@
 ```sql
 
   SELECT imie , nazwisko,
-	ROUND((DATEDIFF(CURDATE(), data_urodzenia))/365, 1)
+	(YEAR(CURRDATE()) - YEAR(data_urodzenia))
 	AS wiek FROM pracownik;
 ```
 
