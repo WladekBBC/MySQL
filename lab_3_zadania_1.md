@@ -1,15 +1,15 @@
 # Zadanie 1
 ```sql
- select imie , nazwisko, data_urodzenia from pracownik;
+  SELECT imie , nazwisko, data_urodzenia FROM pracownik;
 ```
 
 # Zadanie 2
 
 ```sql
 
-SELECT imie , nazwisko,
-ROUND((DATEDIFF(CURDATE(), data_urodzenia))/365, 1)
-AS wiek FROM pracownik;
+ SELECT imie , nazwisko,
+	ROUND((DATEDIFF(CURDATE(), data_urodzenia))/365, 1)
+	AS wiek FROM pracownik;
 ```
 
 # Zadanie 3
@@ -19,5 +19,16 @@ AS wiek FROM pracownik;
 	JOIN pracownik p ON p.dzial = d.id_dzialu
 	GROUP BY d.nazwa, d.id_dzialu;
 
+```
 
+# Zadanie 4 
+
+```sql
+ SELECT DISTINCT k.nazwa_kategori,
+	t.kategoria, SUM(s.ilosc) AS ilosc_towaru
+	FROM kategoria k JOIN towar t
+	ON k.id_kategori = t.kategoria
+	JOIN stan_magazynowy s ON 
+	t.id_towaru = s.towar
+	GROUP BY k.nazwa_kategori, t.kategoria;
 ```
