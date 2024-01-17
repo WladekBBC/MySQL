@@ -55,8 +55,50 @@ SELECT DISTINCT(d.nazwa), d.id_dzialu, COUNT(p.id_pracownika)
 
 ```sql
 
-
+ SELECT ROUND(AVG(pensja), 2)
+	FROM pracownik WHERE data_zatrudnienia < 				SUBDATE(data_zatrudnienia, interval 5 year);
 
 ```
 
+# Zadanie 8
 
+```sql
+
+-- liczenie ogolnych zamowien
+select t.nazwa_towaru, p.towar, sum(p.ilosc) as suma
+from towar t
+join pozycja_zamowienia p on t.id_towaru = p.towar
+group by p.towar
+order by suma desc limit 10;
+
+-- liczenie ilosci unikalnych zamowien
+select t.nazwa_towaru, p.towar, count(*) suma
+from towar t
+join pozycja_zamowienia p on t.id_towaru=p.towar
+group by p.towar
+order by suma desc limit 10;
+
+```
+# Zadanie 9
+
+```sql
+select z.numer_zamowienia, sum(p.ilosc*p.cena),
+z.id_zamowienia from zamowienie z
+join pozycja_zamowienia p on z.id_zamowienia=p.zamowienie
+where year(z.data_zamowienia)=2017
+and quarter(z.data_zamowienia) = 1
+group by z.id_zamowienia;
+
+```
+
+# Zadanie 10
+
+
+```sql
+select pr.imie, pr.nazwisko, sum(p.ilosc*p.cena)
+suma from zamowienie z
+join pozycja_zamowienia p on z.id_zamowienia=p.zamowienie
+join pracownik pr on pr.id_pracownika=z.pracownik_id_pracownika
+group by pr.id_pracownika order by suma desc;
+
+```
