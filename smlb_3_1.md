@@ -1,13 +1,13 @@
 # Zadanie 1
 ```sql
- SELECT imie , nazwisko, data_urodzenia FROM pracownik;
+ SELECT imie, nazwisko, data_urodzenia FROM pracownik;
 ```
 
 # Zadanie 2
 
 ```sql
 
-  SELECT imie , nazwisko,
+  SELECT imie, nazwisko,
 	(YEAR(CURRDATE()) - YEAR(data_urodzenia))
 	AS wiek FROM pracownik;
 ```
